@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="fi">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Elokuvat — Admin</title>
+		<link rel="stylesheet" href="tyyli.css" />
+	</head>
+	<body>
+		<header class="header">
+			<div class="container">
+				<h1>Elokuvat — Admin</h1>
+			</div>
+		</header>
+
+		<main id="app" class="app container">
+			<section class="form-section">
+				<h2 class="form-title">Lisää elokuva</h2>
+				<form id="movie-form">
+					<label class="sr-only" for="title">Nimi</label>
+					<input id="title" name="title" type="text" placeholder="Nimi" required />
+
+					<label class="sr-only" for="image">Kuva URL</label>
+					<input id="image" name="image" type="url" placeholder="Kuva URL (valinnainen)" />
+
+					<label class="sr-only" for="description">Kuvausteksti</label>
+					<textarea id="description" name="description" rows="4" placeholder="Kuvausteksti"></textarea>
+
+					<div class="form-actions">
+						<button type="submit" class="btn primary" id="save-btn">Lisää</button>
+						<button type="button" class="btn" id="cancel-btn" hidden>Peruuta</button>
+					</div>
+				</form>
+			</section>
+
+			<section class="list-section">
+				<div class="controls">
+					<input id="search" placeholder="Hae elokuvia..." />
+				</div>
+
+				<div id="movies-list" class="movies-list" aria-live="polite"></div>
+			</section>
+		</main>
+
+		<script src="vanilla.js"></script>
+	</body>
+</html>
+
